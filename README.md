@@ -1,7 +1,7 @@
 # ApexAI: The Finite-State Machine AI Framework for Unity
 
 <div align="center">
-  <img src="/ApexAI/Assets/Downscaled_ApexAI_Logo-AI_Generated-DALLe.jpg">
+  <img src="/Assets/Downscaled_ApexAI_Logo-AI_Generated-DALLe.jpg">
 </div>
 
 ---
