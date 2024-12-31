@@ -9,16 +9,18 @@ public class AIStateIdle : AIState
     public override void OnExit(GameObject owner) {}
     public override void OnUpdate(GameObject owner)
     {
-
+        
     }
 
     [TransitionFunction]
-    public override bool ConditionMet(GameObject owner){
+    public bool ConditionMet(GameObject owner){
+        Debug.Log("ConditionMet called! :D");
         return false;
     }
 
     [TransitionFunction]
     public bool AnotherConditionMet(GameObject owner){
+        Debug.Log("AnotherConditionMet called! :D");
         return false;
     }
 }

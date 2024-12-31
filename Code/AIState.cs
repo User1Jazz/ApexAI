@@ -1,7 +1,8 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public abstract class AIState : ScriptableObject {
-    public StateTransition[] transitions;
+    public List<StateTransition> transitions;
     public string stateName;
 
     public virtual void OnEnter(GameObject owner) {}
@@ -9,23 +10,11 @@ public abstract class AIState : ScriptableObject {
     public abstract void OnUpdate(GameObject owner);
 
     public AIState CheckTransitions(GameObject owner) {
-        foreach (var transition in transitions) {
-            if (ConditionMet(owner)) {
+        foreach (StateTransition transition in transitions) {
+            if (transition.EvaluateTransition(owner)) {
                 return transition.toState;
             }
         }
         return null;
-    }
-
-    [TransitionFunction]
-    public virtual bool ConditionMet(GameObject owner) {
-        // Add logic for various conditions, e.g.:
-        /*if (condition == "playerNearby") {
-            // Check proximity to player
-            PlayerController player = FindObjectOfType<PlayerController>();
-            return Vector3.Distance(owner.transform.position, player.transform.position) < 10f;
-        }*/
-        // Add more conditions as needed
-        return false;
     }
 }

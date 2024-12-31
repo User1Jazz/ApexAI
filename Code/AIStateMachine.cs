@@ -19,6 +19,7 @@ public class AIStateMachine : MonoBehaviour
         if (currentState != null)
         {
             currentState.OnUpdate(gameObject);
+            currentState.CheckTransitions(gameObject);
         }
     }
 
