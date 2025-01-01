@@ -5,11 +5,19 @@ using UnityEngine;
 [CreateAssetMenu(fileName="new idle state", menuName="ApexAI/Built in/Idle State", order = 1)]
 public class AIStateIdle : AIState
 {
-    public override void OnEnter(GameObject owner) {}
-    public override void OnExit(GameObject owner) {}
+    public override void OnEnter(GameObject owner)
+    {
+        Debug.Log($"{owner.name} entered Idle State.");
+    }
+
+    public override void OnExit(GameObject owner)
+    {
+        Debug.Log($"{owner.name} exited Idle State.");
+    }
+    
     public override void OnUpdate(GameObject owner)
     {
-        
+        // Staying idle, no change...
     }
 
     [TransitionFunction]

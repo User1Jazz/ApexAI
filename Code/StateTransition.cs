@@ -13,7 +13,7 @@ public class StateTransition
 
     public bool EvaluateTransition(GameObject owner)
     {
-        Debug.Log("EvaluateTransition called");
+        //Debug.Log("EvaluateTransition called");
         if (toState != null && !string.IsNullOrEmpty(selectedMethod))
         {
             // Use reflection to find and invoke the selected method

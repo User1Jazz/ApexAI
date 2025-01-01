@@ -10,7 +10,7 @@ public class AIStateMachine : MonoBehaviour
     {
         if (startingState != null)
         {
-            ChangeState(startingState);
+            currentState = startingState;
         }
     }
 
@@ -19,13 +19,19 @@ public class AIStateMachine : MonoBehaviour
         if (currentState != null)
         {
             currentState.OnUpdate(gameObject);
-            currentState.CheckTransitions(gameObject);
+            ChangeState(currentState.CheckTransitions(gameObject));
         }
     }
 
     public string GetCurrentStateName()
     {
-        return currentState.stateName;
+        if(currentState != null)
+        {
+            return currentState.stateName;
+        }else
+        {
+            return "";
+        }
     }
 
     public List<AIState> GetAllStates()
@@ -44,15 +50,11 @@ public class AIStateMachine : MonoBehaviour
 
     public void ChangeState(AIState newState)
     {
-        if (currentState != null)
+        if (currentState != null && newState != null)
         {
+            Debug.Log("Changing State...");
             currentState.OnExit(gameObject);
-        }
-
-        currentState = newState;
-
-        if (currentState != null)
-        {
+            currentState = newState;
             currentState.OnEnter(gameObject);
         }
     }
