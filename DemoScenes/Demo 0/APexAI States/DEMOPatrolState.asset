@@ -15,4 +15,6 @@ MonoBehaviour:
   transitions:
   - toState: {fileID: 11400000, guid: 1eb580008ef4b86398790036b5d5348e, type: 2}
     selectedMethod: PlayerNearby
+  - toState: {fileID: 11400000, guid: 14d40bd7d3f85cd539197e656301591e, type: 2}
+    selectedMethod: CheckAttackCondition
   stateName: DEMO Patrol State

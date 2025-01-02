@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [CreateAssetMenu(fileName="new attack state", menuName="ApexAI/Built in/Attack State", order = 1)]
 public class AIStateAttack : AIState
@@ -22,8 +23,12 @@ public class AIStateAttack : AIState
 
     public override void OnUpdate(GameObject owner)
     {
+        // Stop at current position
+        agentPrefs.navMeshAgent.destination = owner.transform.position;
+        owner.transform.LookAt(agentPrefs.target.position);
         // Attack target
         Debug.Log($"{owner.name} performed an attack!");
+        agentPrefs.FireProjectile();
     }
 
     [TransitionFunction]

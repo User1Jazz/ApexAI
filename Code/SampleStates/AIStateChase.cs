@@ -10,7 +10,7 @@ public class AIStateChase : AIState
 
     public override void OnEnter(GameObject owner)
     {
-        Debug.Log($"{owner.name} entered Idle State.");
+        Debug.Log($"{owner.name} entered Chase State.");
         
         // Prepare agent for patrol behaviour
         agentPrefs = owner.GetComponent<AgentPrefs>(); // Get npc preferences component
@@ -30,7 +30,8 @@ public class AIStateChase : AIState
     [TransitionFunction]
     public bool PlayerNearby(GameObject owner){
         AgentPrefs aPrefs = owner.GetComponent<AgentPrefs>();
-        if(Vector3.Distance(owner.transform.position, aPrefs.target.position) <= aPrefs.detectionRange)
+        float targetDistance = Vector3.Distance(owner.transform.position, aPrefs.target.position);
+        if(targetDistance <= aPrefs.detectionRange && targetDistance > aPrefs.attackRange)
         {
             Debug.Log($"{owner.name}: Chase State condition met.");
             return true;
