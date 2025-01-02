@@ -10,22 +10,26 @@
 
 ---
 
-For documentation, take a look [here](/ApexAI/Documentation/ApexAI-MainDocumentation.md).
+For documentation, take a look [here](/ApexAI/Documentation/ApexAI-Documentation-Main.md).
 
 ---
 
 ## Features
 - Modular State Machine
-- Customizable States via Inspector
-- Smooth Transitions Between Behaviors
-- Sample Demo Scene and Configurations
+- Customizable State Transitions via Inspector
+- Smooth Transitions Between States
+- Support for Custom-made States
+- Sample States
+- Demo Scene
 
 ---
 
 ## Installation
-1. Clone or download the repository.
-2. Import the ApexAI Unity package into your project.
-3. Open the sample scene (`Assets/DemoScene`) to see ApexAI in action.
+1. In Unity Editor, navigate to `Window->Package Manager`
+2. Click on the + icon on the top left and select `Add package from git URL`
+3. Provide the following git URL anc click `Add`:
+  `https://github.com/User1Jazz/ApexAI.git`
+4. Open the sample scene (`Assets/ApexAI/Samples/DemoScenes/Demo 0/Demo_0.unity`) to see ApexAI in action.
 
 ---
 
@@ -43,7 +47,7 @@ Please provide proper attribution if you use these assets.
 ---
 
 ## Attribution
-If you use ApexAI in your project, credit is appreciated but not required. :smile:     
+If you use ApexAI in your project, credit is appreciated but not required. :smiley:     
 However, if you use the **logo or visual assets**, please attribute as follows:
 
 ```
