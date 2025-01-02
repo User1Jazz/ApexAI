@@ -10,7 +10,7 @@
 
 ---
 
-For documentation, take a look [here](/ApexAI/Documentation/ApexAI-Documentation-Main.md).
+For documentation, take a look [here](Documentation/ApexAI-Documentation-Main.md).
 
 ---
 
