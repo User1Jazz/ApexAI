@@ -3,6 +3,7 @@
 ## Content
 - [Getting started](#getting-started)
     - [Installation](#installation)
+    - [System Overview](#system-overview)
     - [Overview of Sample States](#overview-of-sample-states)
     - [Workflow](#workflow)
 - [Defining Custom States](#defining-custom-states)
@@ -13,8 +14,8 @@
 
 ### Installation
 1. In Unity Editor, navigate to `Window->Package Manager`
-2. Click on the + icon on the top left and select `Add package from git URL`
-3. Enter the following git URL anc click `Add`:
+2. Click on the **`+`** icon on the top left and select `Add package from git URL`
+3. Enter the following git URL and click `Add`:
   ```
   https://github.com/User1Jazz/ApexAI.git
   ```
@@ -80,7 +81,7 @@ AI Navigation (com.unity.ai.navigation) by Unity Technologies Inc.
 ## Defining Custom States
 - Custom states must inherit from `AIState` class and define `OnStart()`, `OnUpdate()`, and `OnExit()` functions.
 - When defining your own states, make sure you mark condition functions with `[TransitionFunction]`
-- The outlined state class is shown below:
+- The custom state class is outlined below:
 
 ```
 using UnityEngine;
