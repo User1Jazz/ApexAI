@@ -13,17 +13,18 @@
 ## Getting Started
 
 ### Installation
-1. In Unity Editor, navigate to `Window->Package Manager`
-2. Click on the **`+`** icon on the top left and select `Add package from git URL`
-3. Enter the following git URL and click `Add`:
-  ```
-  https://github.com/User1Jazz/ApexAI.git
-  ```
+1. Download ApexAI [here](https://github.com/User1Jazz/ApexAI/releases)
+2. In Unity Editor, navigate to `Assets->Import Package->Custom Package`
+3. Select and import the downloaded file
+    - when prompted, select all files from the package
 4. Open the sample scene (`ApexAI/Samples/DemoScenes/Demo 0/Demo_0.unity`) to see ApexAI in action.
+- **NOTE:** before you use ApexAI, make sure you [install dependencies](#dependencies)
 
 ### System Overview
 
 #### Dependencies
+- You can install required packages using Unity's package manager (`Window->Package Manager`)
+
 ApexAI requires the following Unity packages in order to function:
 ```
 AI Navigation (com.unity.ai.navigation) by Unity Technologies Inc.
@@ -73,7 +74,7 @@ AI Navigation (com.unity.ai.navigation) by Unity Technologies Inc.
 ### Workflow
 - Create a script that manages character attributes (i.e. character preferences)
 - Add preferences script and `AIStateMachine` to your character
-- Create states and define transitions list for each state
+- Create states and define transitions list for each state; [See how to create custom states](#defining-custom-states)
 - Add the initial state to the state machine component attached to the character
 
 ---

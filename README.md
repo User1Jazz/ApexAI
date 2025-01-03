@@ -25,13 +25,12 @@ For documentation, take a look [here](Documentation/ApexAI-Documentation-Main.md
 ---
 
 ## Installation
-1. In Unity Editor, navigate to `Window->Package Manager`
-2. Click on the **`+`** icon on the top left and select `Add package from git URL`
-3. Enter the following git URL and click `Add`:
-  ```
-  https://github.com/User1Jazz/ApexAI.git
-  ```
+1. Download ApexAI [here](https://github.com/User1Jazz/ApexAI/releases)
+2. In Unity Editor, navigate to `Assets->Import Package->Custom Package`
+3. Select and import the downloaded file
+    - when prompted, select all files from the package
 4. Open the sample scene (`ApexAI/Samples/DemoScenes/Demo 0/Demo_0.unity`) to see ApexAI in action.
+- **NOTE:** before you use ApexAI, make sure you [install dependencies](Documentation/ApexAI-Documentation-Main.md#dependencies)
 
 ---
 
